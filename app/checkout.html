@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout — ShopQA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" data-testid="header">
+      <a href="products.html" class="brand" data-testid="brand">ShopQA</a>
+      <div class="topbar-actions">
+        <span data-testid="user-greeting" class="user-greeting"></span>
+        <a href="cart.html" class="cart-link" data-testid="cart-link">
+          Cart
+          <span class="badge" data-testid="cart-badge">0</span>
+        </a>
+        <button type="button" class="btn ghost" data-testid="logout-button">
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <main class="page narrow" data-testid="checkout-page">
+      <h1 data-testid="checkout-title">Checkout</h1>
+      <p class="subtitle">Enter shipping details to place your order.</p>
+
+      <form id="checkout-form" data-testid="checkout-form" novalidate>
+        <label for="first-name">First name</label>
+        <input id="first-name" data-testid="first-name" required />
+
+        <label for="last-name">Last name</label>
+        <input id="last-name" data-testid="last-name" required />
+
+        <label for="postal-code">Postal code</label>
+        <input id="postal-code" data-testid="postal-code" required />
+
+        <div
+          id="checkout-error"
+          data-testid="checkout-error"
+          class="error"
+          hidden
+          role="alert"
+        ></div>
+
+        <div class="row-actions">
+          <a href="cart.html" class="btn ghost" data-testid="cancel-checkout">Cancel</a>
+          <button type="submit" class="btn primary" data-testid="continue-checkout">
+            Continue
+          </button>
+        </div>
+      </form>
+
+      <section id="order-overview" data-testid="order-overview" class="order-overview" hidden>
+        <h2>Order overview</h2>
+        <ul id="overview-items" data-testid="overview-items"></ul>
+        <p>
+          Total:
+          <strong data-testid="order-total">$0.00</strong>
+        </p>
+        <button type="button" class="btn primary" data-testid="finish-order">
+          Finish
+        </button>
+      </section>
+
+      <section id="order-complete" data-testid="order-complete" class="success-panel" hidden>
+        <h2 data-testid="complete-header">Thank you for your order!</h2>
+        <p data-testid="complete-text">Your order has been dispatched.</p>
+        <p data-testid="order-id" class="order-id"></p>
+        <a href="products.html" class="btn primary" data-testid="back-home">
+          Back to products
+        </a>
+      </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

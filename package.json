@@ -1,0 +1,30 @@
+{
+  "name": "cypress-shopqa-portfolio",
+  "version": "1.0.0",
+  "description": "Hands-on Cypress learning project (basic → advanced) with a demo e-commerce app — built for QA portfolios",
+  "scripts": {
+    "start": "npx serve app -l 3000 --no-clipboard",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "test": "start-server-and-test start http://localhost:3000 cy:run",
+    "test:open": "start-server-and-test start http://localhost:3000 cy:open",
+    "test:basics": "start-server-and-test start http://localhost:3000 \"cypress run --spec 'cypress/e2e/01-basics/**/*.cy.js'\"",
+    "test:module": "start-server-and-test start http://localhost:3000 \"cypress run --spec\""
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "qa",
+    "automation",
+    "portfolio",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^14.5.0",
+    "serve": "^14.2.4",
+    "start-server-and-test": "^2.0.12"
+  }
+}

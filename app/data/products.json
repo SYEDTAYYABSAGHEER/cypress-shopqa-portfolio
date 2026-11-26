@@ -1,0 +1,38 @@
+[
+  {
+    "id": "backpack",
+    "name": "QA Backpack",
+    "price": 29.99,
+    "description": "Carry your test plans in style."
+  },
+  {
+    "id": "bike-light",
+    "name": "Bike Light",
+    "price": 9.99,
+    "description": "Illuminate late-night bug hunts."
+  },
+  {
+    "id": "bolt-shirt",
+    "name": "Bolt T-Shirt",
+    "price": 15.99,
+    "description": "Fast feedback, faster fashion."
+  },
+  {
+    "id": "fleece-jacket",
+    "name": "Fleece Jacket",
+    "price": 49.99,
+    "description": "Stay warm during long regression runs."
+  },
+  {
+    "id": "onesie",
+    "name": "Onesie",
+    "price": 7.99,
+    "description": "Cozy coverage for flaky nights."
+  },
+  {
+    "id": "red-hoodie",
+    "name": "Red Hoodie",
+    "price": 39.99,
+    "description": "Ship confidence in every stitch."
+  }
+]

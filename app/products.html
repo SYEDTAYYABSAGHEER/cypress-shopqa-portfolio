@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products — ShopQA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" data-testid="header">
+      <a href="products.html" class="brand" data-testid="brand">ShopQA</a>
+      <div class="topbar-actions">
+        <span data-testid="user-greeting" class="user-greeting"></span>
+        <a href="cart.html" class="cart-link" data-testid="cart-link">
+          Cart
+          <span class="badge" data-testid="cart-badge">0</span>
+        </a>
+        <button type="button" class="btn ghost" data-testid="logout-button">
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <main class="page" data-testid="products-page">
+      <div class="page-head">
+        <div>
+          <h1 data-testid="products-title">Products</h1>
+          <p class="subtitle">Add items to your cart and check out.</p>
+        </div>
+        <label class="sort-label">
+          Sort by
+          <select id="sort" data-testid="sort-select">
+            <option value="name-asc">Name A–Z</option>
+            <option value="name-desc">Name Z–A</option>
+            <option value="price-asc">Price low–high</option>
+            <option value="price-desc">Price high–low</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="loading" data-testid="loading" class="loading">Loading products…</div>
+      <div id="product-grid" data-testid="product-grid" class="product-grid" hidden></div>
+      <div id="empty-state" data-testid="empty-state" class="empty" hidden>
+        No products found.
+      </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

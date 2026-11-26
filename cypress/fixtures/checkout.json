@@ -1,0 +1,11 @@
+{
+  "customer": {
+    "firstName": "Ada",
+    "lastName": "Lovelace",
+    "postalCode": "10001"
+  },
+  "orderResponse": {
+    "id": "ORD-MOCK-12345",
+    "status": "confirmed"
+  }
+}
